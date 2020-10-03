@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { fabric } from 'fabric';
 export class controller {
 
@@ -6,9 +7,11 @@ export class controller {
     markers: Array<fabric.Rect> = [];
     currentmarker: fabric.Rect;
     markerTitles: Array<String>;
+    position:number = 0;
+    lines:Array<fabric.Rect> = [];
     
     constructor() {
-        
+
     }
     
     draw(w: number, h: number, x: number, y:number, numberofMarkers: number, markertitles:Array<string>){
@@ -59,13 +62,30 @@ export class controller {
                 evented: true,
             });
 
+            this.lines.push(line);
+
             this.group.addWithUpdate(line);
             this.group.addWithUpdate(text);
             this.group.addWithUpdate(clickable);
+            //this.group.addWithUpdate(this.positionLine);
         }
+        this.setPosition(this.position.toString())
     }
 
     getGroup(){
         return this.group
+    }
+
+    setPosition(i:string){
+        this.position = +i;
+        this.lines.forEach(function (value:fabric.Rect) {
+            value.set("fill","black")
+        }); 
+        this.lines[this.position].set("fill","red");
+        console.log(this.lines[0]);
+    }
+
+    getPosition():number{
+        return this.position;
     }
 }
