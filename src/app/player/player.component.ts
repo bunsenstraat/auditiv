@@ -45,7 +45,7 @@ export class PlayerComponent implements OnInit {
     this.c2.draw(320,2,0,60,2,["langsam","mittel","schnell"]);
 
     this.c3 = new controller();
-    this.c3.draw(320,2,0,60,3,["aus","mittel","laut","nur beat"]);
+    this.c3.draw(320,2,0,60,2,["Sprache (pur)","Beat (pur)","Sprache/Beat (mix)"]);
 
     this.canvas.hoverCursor = "pointer";
     this.canvas2.hoverCursor = "pointer";

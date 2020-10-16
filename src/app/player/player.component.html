@@ -17,7 +17,7 @@ Spürst du den Rhythmus der Sprache?<br>Sprich mit und nimm deine eigene Version
         </div>
         <div class="" style="">
           <div class="row">
-            <div class="col-3 pt-5">
+            <div class="description col-3 pt-5">
               Betonung
             </div>
             <div class="col-9">
@@ -25,7 +25,8 @@ Spürst du den Rhythmus der Sprache?<br>Sprich mit und nimm deine eigene Version
             </div>
           </div>
           <div class="row">
-            <div class="col-3 pt-5">
+            <div class=" 
+            description col-3 pt-5">
               Tempo
             </div>
             <div class="col-9">
@@ -33,7 +34,7 @@ Spürst du den Rhythmus der Sprache?<br>Sprich mit und nimm deine eigene Version
             </div>
           </div>
           <div class="row">
-            <div class="col-3 pt-5">
+            <div class="description col-3 pt-5">
               Beat
             </div>
             <div class="col-9">
@@ -44,26 +45,30 @@ Spürst du den Rhythmus der Sprache?<br>Sprich mit und nimm deine eigene Version
       </div>
       <div class="col">
         <div class="row">
-        <div class="text-left pt-5">
+        <div class="text-left pt-5" style="margin-top: 55%;">
           <div *ngIf="playerstatus == 'paused' || playerstatus == 'ended'">
-            <img width="50" style="cursor: pointer;" (click)="start()" src="/assets/noun_play_2119021.svg">
+            <img width="80" style="cursor: pointer;" (click)="start()" src="/assets/noun_play_2119021.svg">
+            <br>
+            Abspielen
           </div>
           <div *ngIf="playerstatus == 'playing'">
-            <img width="50" style="cursor: pointer;" (click)="stop()" src="/assets/noun_pause_2349720.svg">
+            <img width="80" style="cursor: pointer;" (click)="stop()" src="/assets/noun_pause_2349720.svg">
+            <br>
+            Pausieren
           </div>
           <div *ngIf="playerstatus == 'loading'">
-            <img width="50" style="cursor: pointer;" src="/assets/hourglass.svg">
+            <img width="80" style="cursor: pointer;" src="/assets/hourglass.svg">
           </div>
         </div>
         </div>
-        <div class="row">
+<!--         <div class="row">
           <div *ngIf="playerstatus == 'paused' || playerstatus == 'ended'">
             <img width="50" style="cursor: pointer;" (click)="start()" src="/assets/noun_Record_2119031.svg">
           </div>
           <div *ngIf="playerstatus == 'playing'">
             <img width="50" style="cursor: pointer;" (click)="stop()" src="/assets/noun_Record_2135284.svg">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

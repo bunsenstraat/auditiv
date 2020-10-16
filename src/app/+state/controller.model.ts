@@ -47,11 +47,19 @@ export class controller {
                 left: line.left, //Take the block's position
                 top: line.top + 30, 
                 fill: 'black',
+               // backgroundColor: 'black',
                 fontSize: 12,
                 selectable: false,
                 evented: false,
-                fontFamily: 'sans-serif'
+                fontFamily: 'sans-serif',
             });
+
+            if(i>0)
+            text.left = text.left - text.width;
+
+            if(i>0 && i<markertitles.length-1)
+            text.left = text.left;
+
             var clickable = new fabric.Rect({
                 name:i.toString(),
                 width: partsize,
@@ -61,7 +69,16 @@ export class controller {
                 fill: '',
                 selectable: false,
                 evented: true,
+                
             });
+
+            if(i==0)
+            clickable.width = clickable.width/2;
+            if(i>0)
+            clickable.left = clickable.left - clickable.width/2;
+
+            if(i>0 && i<markertitles.length-1)
+            text.left = text.left + text.width/2;
 
             this.lines.push(line);
 

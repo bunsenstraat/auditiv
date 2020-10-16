@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "auditiv"
+  },
+  "targets": {
+    "auditiv": {
+      "hosting": {
+        "auditiv": [
+          "auditiv"
+        ]
+      }
+    }
   }
 }

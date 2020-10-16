@@ -5,7 +5,7 @@ $dir = __DIR__ ."/Interface_Auditiv/";
 
 $tempos =Array("80bpm","100bpm","120bpm");
 $tones =Array("BetonungSchwach","BetonungMittel","BetonungStark");
-$beats = Array("BeatNO","BeatMittel","BeatLaut","STUMM");
+$beats = Array("BeatNO","STUMM","BeatLaut");
 
 $evals = Array($tones,$tempos,$beats);
 $obs = Array();
