@@ -2,51 +2,69 @@
   <!-- 
     ^--- Added class  -->
   <div class="container-fluid">
-    <h1 class="text-center text-danger">Wie fühlt sich ein Gedicht ein?</h1>
+    <div class="row">
+      <div class="col">
 
-    <div class="container-fluid" style="margin-left: -120px">
-      <div class="row">
-        <div class="col text-right pt-5">
-          <h3>Betonung</h3>
+      </div>
+      <div class="col-6">
+
+
+        <h4>erlkoenig.online - Trainiere dein auditives Gespür</h4>
+        <h1 class="text-left text-danger">Wie fühlt sich ein Gedicht ein?</h1>
+        <div class="description">
+          Beweg die Regler und hör dir das Gedicht an.
+Spürst du den Rhythmus der Sprache?<br>Sprich mit und nimm deine eigene Version auf.
         </div>
-        <div class="col">
-          <canvas id="canvas" width="500" height="100"></canvas>
+        <div class="" style="">
+          <div class="row">
+            <div class="col-3 pt-5">
+              Betonung
+            </div>
+            <div class="col-9">
+              <canvas id="canvas" width="329" height="100"></canvas>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 pt-5">
+              Tempo
+            </div>
+            <div class="col-9">
+              <canvas id="canvas2" width="329" height="100"></canvas>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3 pt-5">
+              Beat
+            </div>
+            <div class="col-9">
+              <canvas id="canvas3" width="329" height="100"></canvas>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col text-right pt-5">
-          <h3>Tempo</h3>
+      <div class="col">
+        <div class="row">
+        <div class="text-left pt-5">
+          <div *ngIf="playerstatus == 'paused' || playerstatus == 'ended'">
+            <img width="50" style="cursor: pointer;" (click)="start()" src="/assets/noun_play_2119021.svg">
+          </div>
+          <div *ngIf="playerstatus == 'playing'">
+            <img width="50" style="cursor: pointer;" (click)="stop()" src="/assets/noun_pause_2349720.svg">
+          </div>
+          <div *ngIf="playerstatus == 'loading'">
+            <img width="50" style="cursor: pointer;" src="/assets/hourglass.svg">
+          </div>
         </div>
-        <div class="col">
-          <canvas id="canvas2" width="500" height="100"></canvas>
         </div>
-      </div>
-      <div class="row">
-        <div class="col text-right pt-5">
-          <h3>Beat</h3>
-        </div>
-        <div class="col">
-          <canvas id="canvas3" width="500" height="100"></canvas>
+        <div class="row">
+          <div *ngIf="playerstatus == 'paused' || playerstatus == 'ended'">
+            <img width="50" style="cursor: pointer;" (click)="start()" src="/assets/noun_Record_2119031.svg">
+          </div>
+          <div *ngIf="playerstatus == 'playing'">
+            <img width="50" style="cursor: pointer;" (click)="stop()" src="/assets/noun_Record_2135284.svg">
+          </div>
         </div>
       </div>
     </div>
-    <div class="text-center pt-5">
-      <div *ngIf="playerstatus == 'paused'">
-        <button type="button" class="btn btn-success" (click)="start()">
-          Start
-        </button>
-      </div>
-      <div *ngIf="playerstatus == 'playing'">
-        <button type="button" class="btn btn-danger" (click)="stop()">
-          Stop
-        </button>
-      </div>
-        <div *ngIf="playerstatus == 'loading'">
-          <button type="button" class="btn btn-danger" (click)="stop()">
-            Loading
-          </button>
-        </div>
-      </div>
-    </div>
+  </div>
 </div>
-

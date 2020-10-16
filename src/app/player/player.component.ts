@@ -39,13 +39,13 @@ export class PlayerComponent implements OnInit {
     this.canvas3 = new fabric.Canvas('canvas3');
 
     this.c = new controller();
-    this.c.draw(300,5,0,60,2,["schwach","mittel","stark"]);
+    this.c.draw(320,2,0,60,2,["schwach","mittel","stark"]);
     
     this.c2 = new controller();
-    this.c2.draw(300,5,0,60,2,["langsam","mittel","schnell"]);
+    this.c2.draw(320,2,0,60,2,["langsam","mittel","schnell"]);
 
     this.c3 = new controller();
-    this.c3.draw(300,5,0,60,3,["aus","mittel","laut","nur beat"]);
+    this.c3.draw(320,2,0,60,3,["aus","mittel","laut","nur beat"]);
 
     this.canvas.hoverCursor = "pointer";
     this.canvas2.hoverCursor = "pointer";

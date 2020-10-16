@@ -35,7 +35,7 @@ export class controller {
         console.log(partsize);
         for(let i=0; i<numberofMarkers+1;i++){
             let line = new fabric.Rect({
-                width: 2,
+                width: h,
                 height: 30,
                 left: x+ partsize * i,
                 top: y-15,
@@ -47,9 +47,10 @@ export class controller {
                 left: line.left, //Take the block's position
                 top: line.top + 30, 
                 fill: 'black',
-                fontSize: 20,
+                fontSize: 12,
                 selectable: false,
                 evented: false,
+                fontFamily: 'sans-serif'
             });
             var clickable = new fabric.Rect({
                 name:i.toString(),

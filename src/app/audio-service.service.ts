@@ -207,4 +207,5 @@ export class AudioService {
     public toggleAudio(): void {
         (this.audio.paused) ? this.audio.play() : this.audio.pause();
     }
+
 }
